@@ -1,20 +1,50 @@
-# TP Biocapteurs — plasmon de surface (SPR) et SERS
+# Optical Biosensing — SPR and SERS Laboratory Study
 
-TP de biocapteurs optiques (février 2025) : résonance de plasmon de surface et spectroscopie Raman exaltée de surface (SERS) avec deux longueurs d'onde d'excitation.
+An instrumentation study of surface plasmon resonance (SPR) and surface-enhanced Raman scattering (SERS), supported by MATLAB visualisations, calculation spreadsheets and a laboratory report.
 
-| Fichier | Contenu |
+## Scientific scope
+
+SPR links the optical resonance condition to the metal/dielectric interface and the effective refractive index near the surface. Changes associated with protein layers are explored through angular shifts and comparative plots for gold, silver and aluminium.
+
+SERS exercises examine excitation at 660 nm and 785 nm. The spreadsheets and report contain the underlying coursework calculations; this repository does not include a complete acquisition system or embedded sensor firmware.
+
+## Repository map
+
+| Artifact | Purpose |
 |---|---|
-| `compte_rendu_tp1_biocapteurs.odt` | Compte rendu |
-| `tableau_1_plasmon_de_surface_calculs.xlsx` | Mesures et calculs, plasmon de surface |
-| `tableau_2_sers_excitation_660nm.xlsx` | Mesures SERS, excitation à 660 nm |
-| `tableau_3_sers_excitation_785nm.xlsx` | Mesures SERS, excitation à 785 nm |
+| [Laboratory report](compte_rendu_tp1_biocapteurs.odt) | Experimental context and working analysis |
+| [Surface-plasmon calculations](tableau_1_plasmon_de_surface_calculs.xlsx) | Calculation workbook |
+| [SERS, 660 nm](tableau_2_sers_excitation_660nm.xlsx) | Excitation-specific workbook |
+| [SERS, 785 nm](tableau_3_sers_excitation_785nm.xlsx) | Excitation-specific workbook |
+| [MATLAB scripts](src/) | Comparative plots and simplified physical calculations |
 
-## À documenter
+## MATLAB implementation
 
-Le compte rendu (`.odt`) et les classeurs n'ont pas été analysés en détail : montage, grandeurs mesurées, traitement et conclusions sont à résumer ici.
+- [`delta_theta.m`](src/delta_theta.m): compares preset angular shifts for one protein layer and two layers.
+- [`lambda_plot.m`](src/lambda_plot.m): wavelength-related visualisation.
+- [`neff_plot_correct.m`](src/neff_plot_correct.m): effective-index visualisation.
+- [`zd_plot.m`](src/zd_plot.m): compares preset penetration-depth values.
+- [`champ_evanescent.m`](src/champ_evanescent.m): computes conductive skin depth using `delta = 1 / sqrt(pi * f * mu * sigma)`.
 
-## Avant publication
+The last script uses a 1 GHz frequency and tabulated electrical conductivities. It is an illustrative conductive skin-depth calculation; it must not be interpreted as a calibrated optical SPR evanescent-field model.
 
-- Vérifier si les données ont été acquises en groupe et si elles peuvent être diffusées.
-- L'énoncé du TP (document de l'enseignant) n'est volontairement pas copié.
-- Classé dans `To_Review` : instrumentation optique, hors du cœur « embarqué » du portfolio, mais pertinent pour un poste en instrumentation.
+## Reproducing the figures
+
+```bash
+git clone https://github.com/tedjelmoulksn-dotcom/Bio_capteur.git
+cd Bio_capteur
+```
+
+Open MATLAB, change to `src/` and run the selected script. Open the report in an ODT-compatible editor and inspect spreadsheet formulas alongside their units and assumptions.
+
+## Interpretation and validation
+
+Several scripts plot manually entered values rather than processing raw instrument acquisitions. Distinguish calculated values, report observations and illustrative constants when reusing the material. No sensitivity, detection limit, repeatability or uncertainty budget is newly established here.
+
+## Skills represented
+
+Optical instrumentation, interfacial sensing, metal-dependent response, mathematical modelling and communication of scientific results.
+
+## Licence
+
+No project-wide licence has been defined.
