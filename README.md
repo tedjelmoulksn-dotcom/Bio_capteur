@@ -1,57 +1,20 @@
-# Optical Biosensing — SPR and SERS Laboratory Study
+# TP Biocapteurs — plasmon de surface (SPR) et SERS
 
-SPR and SERS biosensing studies with MATLAB plots and calculation workbooks.
+TP de biocapteurs optiques (février 2025) : résonance de plasmon de surface et spectroscopie Raman exaltée de surface (SERS) avec deux longueurs d'onde d'excitation.
 
-![Coursework inputs, calculations and comparative plots.](assets/project-overview.svg)
-
-*Coursework inputs, calculations and comparative plots.*
-
-## Scientific scope
-
-SPR links the optical resonance condition to the metal/dielectric interface and the effective refractive index near the surface. Changes associated with protein layers are explored through angular shifts and comparative plots for gold, silver and aluminium.
-
-SERS exercises examine excitation at 660 nm and 785 nm. The spreadsheets and report contain the underlying coursework calculations; this repository does not include a complete acquisition system or embedded sensor firmware.
-
-## Repository map
-
-| Artifact | Purpose |
+| Fichier | Contenu |
 |---|---|
-| [Laboratory report](compte_rendu_tp1_biocapteurs.odt) | Experimental context and working analysis |
-| [Surface-plasmon calculations](tableau_1_plasmon_de_surface_calculs.xlsx) | Calculation workbook |
-| [SERS, 660 nm](tableau_2_sers_excitation_660nm.xlsx) | Excitation-specific workbook |
-| [SERS, 785 nm](tableau_3_sers_excitation_785nm.xlsx) | Excitation-specific workbook |
-| [MATLAB scripts](src/) | Comparative plots and simplified physical calculations |
+| `compte_rendu_tp1_biocapteurs.odt` | Compte rendu |
+| `tableau_1_plasmon_de_surface_calculs.xlsx` | Mesures et calculs, plasmon de surface |
+| `tableau_2_sers_excitation_660nm.xlsx` | Mesures SERS, excitation à 660 nm |
+| `tableau_3_sers_excitation_785nm.xlsx` | Mesures SERS, excitation à 785 nm |
 
-## MATLAB implementation
+## À documenter
 
-- [`delta_theta.m`](src/delta_theta.m): compares preset angular shifts for one protein layer and two layers.
-- [`lambda_plot.m`](src/lambda_plot.m): wavelength-related visualisation.
-- [`wavelength_by_medium.m`](src/wavelength_by_medium.m): the same wavelength data grouped by surrounding medium, rather than by metal.
-- [`zd_plot.m`](src/zd_plot.m): compares preset penetration-depth values.
-- The independent [RF skin-depth study](studies/rf_skin_depth/) computes conductive skin depth at 1 GHz; it is kept outside the optical plotting scripts.
+Le compte rendu (`.odt`) et les classeurs n'ont pas été analysés en détail : montage, grandeurs mesurées, traitement et conclusions sont à résumer ici.
 
-The former `neff_plot_correct.m` filename was misleading: its arrays contain wavelengths in nm, not effective refractive indices. It is now named `wavelength_by_medium.m`; its numerical data are preserved. The RF example is separated because conductive skin depth at 1 GHz and optical SPR field penetration use different physical models.
+## Avant publication
 
-## Reproducing the figures
-
-```bash
-git clone https://github.com/tedjelmoulksn-dotcom/Bio_capteur.git
-cd Bio_capteur
-```
-
-Open MATLAB, change to `src/` and run the selected optical script. For the RF example, run `studies/rf_skin_depth/skin_depth_1ghz.m` separately. Open the report in an ODT-compatible editor and inspect spreadsheet formulas alongside their units and assumptions.
-
-## Interpretation and validation
-
-Read the plots together with the workbook inputs: metal, wavelength, refractive index and protein-layer configuration determine the comparison. A preset angular shift is a plotted input; a calculated skin depth comes from a model. Keeping these roles explicit makes the scientific interpretation traceable.
-
-The scripts distinguish two operations: plotting workbook/report values and computing a response from physical parameters. Track the source and units of each plotted input so that angular-shift, penetration-depth and skin-depth comparisons retain their intended meaning.
-
-## Skills represented
-
-Optical instrumentation, interfacial sensing, metal-dependent response, mathematical modelling and communication of scientific results.
-
-## Licence
-
-No project-wide licence has been defined.
-
+- Vérifier si les données ont été acquises en groupe et si elles peuvent être diffusées.
+- L'énoncé du TP (document de l'enseignant) n'est volontairement pas copié.
+- Classé dans `To_Review` : instrumentation optique, hors du cœur « embarqué » du portfolio, mais pertinent pour un poste en instrumentation.
