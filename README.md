@@ -26,11 +26,11 @@ SERS exercises examine excitation at 660 nm and 785 nm. The spreadsheets and rep
 
 - [`delta_theta.m`](src/delta_theta.m): compares preset angular shifts for one protein layer and two layers.
 - [`lambda_plot.m`](src/lambda_plot.m): wavelength-related visualisation.
-- [`neff_plot_correct.m`](src/neff_plot_correct.m): effective-index visualisation.
+- [`wavelength_by_medium.m`](src/wavelength_by_medium.m): the same wavelength data grouped by surrounding medium, rather than by metal.
 - [`zd_plot.m`](src/zd_plot.m): compares preset penetration-depth values.
-- [`champ_evanescent.m`](src/champ_evanescent.m): computes conductive skin depth using `delta = 1 / sqrt(pi * f * mu * sigma)`.
+- The independent [RF skin-depth study](studies/rf_skin_depth/) computes conductive skin depth at 1 GHz; it is kept outside the optical plotting scripts.
 
-The last script uses a 1 GHz frequency and tabulated electrical conductivities. It is an illustrative conductive skin-depth calculation; it must not be interpreted as a calibrated optical SPR evanescent-field model.
+The former `neff_plot_correct.m` filename was misleading: its arrays contain wavelengths in nm, not effective refractive indices. It is now named `wavelength_by_medium.m`; its numerical data are preserved. The RF example is separated because conductive skin depth at 1 GHz and optical SPR field penetration use different physical models.
 
 ## Reproducing the figures
 
@@ -39,7 +39,7 @@ git clone https://github.com/tedjelmoulksn-dotcom/Bio_capteur.git
 cd Bio_capteur
 ```
 
-Open MATLAB, change to `src/` and run the selected script. Open the report in an ODT-compatible editor and inspect spreadsheet formulas alongside their units and assumptions.
+Open MATLAB, change to `src/` and run the selected optical script. For the RF example, run `studies/rf_skin_depth/skin_depth_1ghz.m` separately. Open the report in an ODT-compatible editor and inspect spreadsheet formulas alongside their units and assumptions.
 
 ## Interpretation and validation
 
@@ -54,3 +54,4 @@ Optical instrumentation, interfacial sensing, metal-dependent response, mathemat
 ## Licence
 
 No project-wide licence has been defined.
+
