@@ -1,6 +1,10 @@
 # Optical Biosensing — SPR and SERS Laboratory Study
 
-An instrumentation study of surface plasmon resonance (SPR) and surface-enhanced Raman scattering (SERS), supported by MATLAB visualisations, calculation spreadsheets and a laboratory report.
+SPR and SERS biosensing studies with MATLAB plots and calculation workbooks.
+
+![Coursework inputs, calculations and comparative plots.](assets/project-overview.svg)
+
+*Coursework inputs, calculations and comparative plots.*
 
 ## Scientific scope
 
