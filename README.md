@@ -39,7 +39,9 @@ Open MATLAB, change to `src/` and run the selected script. Open the report in an
 
 ## Interpretation and validation
 
-Several scripts plot manually entered values rather than processing raw instrument acquisitions. Distinguish calculated values, report observations and illustrative constants when reusing the material. No sensitivity, detection limit, repeatability or uncertainty budget is newly established here.
+Read the plots together with the workbook inputs: metal, wavelength, refractive index and protein-layer configuration determine the comparison. A preset angular shift is a plotted input; a calculated skin depth comes from a model. Keeping these roles explicit makes the scientific interpretation traceable.
+
+The scripts distinguish two operations: plotting workbook/report values and computing a response from physical parameters. Track the source and units of each plotted input so that angular-shift, penetration-depth and skin-depth comparisons retain their intended meaning.
 
 ## Skills represented
 
