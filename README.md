@@ -9,6 +9,10 @@ TP de biocapteurs optiques (février 2025) : résonance de plasmon de surface et
 | `tableau_2_sers_excitation_660nm.xlsx` | Mesures SERS, excitation à 660 nm |
 | `tableau_3_sers_excitation_785nm.xlsx` | Mesures SERS, excitation à 785 nm |
 
+![Bio capteur project overview](assets/project-overview.svg)
+
+*Study overview of the SPR and SERS coursework material.*
+
 ## À documenter
 
 Le compte rendu (`.odt`) et les classeurs n'ont pas été analysés en détail : montage, grandeurs mesurées, traitement et conclusions sont à résumer ici.
