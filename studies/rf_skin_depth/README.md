@@ -1,11 +1,7 @@
-# RF Conductive Skin Depth — Independent Example
+# Radio-Frequency Skin Depth
 
-This supplementary MATLAB calculation compares gold, silver and aluminium at **1 GHz**, using tabulated bulk conductivities and free-space permeability.
+Separate 1 GHz skin-depth comparison for gold, silver and aluminium using permeability and electrical conductivity.
 
-```matlab
-run('skin_depth_1ghz.m')
-```
+## Getting started
 
-The model is `delta = 1/sqrt(pi*f*mu0*sigma)`, with the result expressed in metres. It describes the good-conductor skin-depth approximation. It does not compute optical SPR penetration depth or a biosensor response.
-
-The script was previously stored as `src/champ_evanescent.m`. Its constants and calculated quantities are preserved; it now has a filename and location that identify its RF scope.
+Run the MATLAB scripts in this folder. This calculation describes RF skin depth and is separate from the optical SPR penetration-depth study.
