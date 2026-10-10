@@ -1,20 +1,23 @@
-# TP Biocapteurs — plasmon de surface (SPR) et SERS
+# Optical Biosensing: SPR and SERS
 
-TP de biocapteurs optiques (février 2025) : résonance de plasmon de surface et spectroscopie Raman exaltée de surface (SERS) avec deux longueurs d'onde d'excitation.
+Laboratory work on surface plasmon resonance (SPR) and surface-enhanced Raman spectroscopy (SERS). MATLAB studies compare optical properties of metals, while spreadsheets record measurements and calculations at 660 nm and 785 nm excitation.
 
-| Fichier | Contenu |
+## Repository guide
+
+| Location | Contents |
 |---|---|
-| `compte_rendu_tp1_biocapteurs.odt` | Compte rendu |
-| `tableau_1_plasmon_de_surface_calculs.xlsx` | Mesures et calculs, plasmon de surface |
-| `tableau_2_sers_excitation_660nm.xlsx` | Mesures SERS, excitation à 660 nm |
-| `tableau_3_sers_excitation_785nm.xlsx` | Mesures SERS, excitation à 785 nm |
+| [src/](src/) | Optical modelling and plotting scripts |
+| [data/](data/) | Measurement workbooks and original tables |
+| [docs/](docs/) | Laboratory reports and SPR calculations |
+| [assets/](assets/) | Optical result figures |
+| [studies/](studies/) | Separate radio-frequency skin-depth study |
 
-## À documenter
+## Getting started
 
-Le compte rendu (`.odt`) et les classeurs n'ont pas été analysés en détail : montage, grandeurs mesurées, traitement et conclusions sont à résumer ici.
+Open the workbooks to review measurements, then run the optical scripts in MATLAB from `src/`. The RF skin-depth calculation is a separate study at 1 GHz, under `studies/rf_skin_depth/`.
 
-## Avant publication
+## Project context
 
-- Vérifier si les données ont été acquises en groupe et si elles peuvent être diffusées.
-- L'énoncé du TP (document de l'enseignant) n'est volontairement pas copié.
-- Classé dans `To_Review` : instrumentation optique, hors du cœur « embarqué » du portfolio, mais pertinent pour un poste en instrumentation.
+Coursework in optical instrumentation. Original report drafts and calculated workbooks are kept distinct from source tables.
+
+The original [SPR/SERS ODT report](https://github.com/tedjelmoulksn-dotcom/Instrumentation_Physique/blob/main/archive/biosensing_original/tp1_biocap_2.odt) remains in the instrumentation repository.
